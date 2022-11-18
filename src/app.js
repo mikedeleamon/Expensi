@@ -24,15 +24,6 @@ const jsx = (
     </Provider>
 )
 
-store.dispatch(addExpense({description:'water bill',note:'',amount: 12000,createdAt: 2929292}))
-store.dispatch(addExpense({description:'gas bill',note:'',amount:83300,createdAt: 2920292}))
-store.dispatch(addExpense({description:'electicity bill',note:'',amount:823300,createdAt: 3420292}))
-
-
-const state = store.getState()
-const visible = getVisibleExpenses(state.expenses,state.filters)
-
-console.log(visible)
 
 ReactDOM.render(jsx,appRoot)
 
