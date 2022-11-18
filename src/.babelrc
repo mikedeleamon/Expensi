@@ -1,0 +1,10 @@
+{
+    "presets": [
+        "env",
+        "react"],
+        //allows you to use ES6 class properties and write classes easier
+    "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread"
+        ]
+}

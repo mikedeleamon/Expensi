@@ -1,0 +1,37 @@
+html{
+    font-size: 62.5%; /*this allows us to use rem in base 10*/
+}
+
+body{
+    font-family: Helvetica,Arial, sans-serif;
+    font-size: $m-size;
+    background-color: white;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:disabled{
+    cursor: default;
+}
+
+.no-pad{
+    padding: 0;
+}
+
+.no-marg-top{
+    margin-top: 0;
+}
+
+.no-marg-bottom{
+    margin-bottom: 0;
+}
+.no-marg-vert{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.is-active{
+    font-weight: bold;
+}

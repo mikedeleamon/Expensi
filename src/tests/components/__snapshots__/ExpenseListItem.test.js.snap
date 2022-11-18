@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render single item 1`] = `
+<div>
+  <div>
+    <Link
+      replace={false}
+      to="/edit/2"
+    >
+      <h2>
+        gas bill
+      </h2>
+    </Link>
+  </div>
+  <h3>
+    83300
+     - created at: 
+    -345600000
+     
+  </h3>
+</div>
+`;

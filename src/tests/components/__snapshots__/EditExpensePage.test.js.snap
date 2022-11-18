@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should generate edit page properly 1`] = `
+<div>
+   
+  <h1>
+    Edit an Expense
+  </h1>
+   
+  2
+  <ExpenseForm
+    expense={
+      Object {
+        "amount": 83300,
+        "createdAt": -345600000,
+        "description": "gas bill",
+        "id": "2",
+        "note": "",
+      }
+    }
+    onSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    remove
+  </button>
+</div>
+`;
+
+exports[`should generate edit page properly with data 1`] = `
+<div>
+   
+  <h1>
+    Edit an Expense
+  </h1>
+   
+  2
+  <ExpenseForm
+    expense={
+      Object {
+        "amount": 83300,
+        "createdAt": -345600000,
+        "description": "gas bill",
+        "id": "2",
+        "note": "",
+      }
+    }
+    onSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    remove
+  </button>
+</div>
+`;
+
+exports[`should generate remove expense from expenses data 1`] = `
+<div>
+   
+  <h1>
+    Edit an Expense
+  </h1>
+   
+  2
+  <ExpenseForm
+    expense={
+      Object {
+        "amount": 83300,
+        "createdAt": -345600000,
+        "description": "gas bill",
+        "id": "2",
+        "note": "",
+      }
+    }
+    onSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    remove
+  </button>
+</div>
+`;
