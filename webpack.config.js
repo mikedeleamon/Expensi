@@ -35,18 +35,21 @@ const CSSExtract = new ExtractTextPlugin('styles.css')
             //PUT THE STYLE LOADER BEFORE THE CSS LOADER!!!!!!
             use:CSSExtract.extract({
                use: [
-                {loader:'css-loader',
-                options:{
-                    sourceMap:true
-                }},
-                {loader:'sass-loader',
-                options:{
-                    sourceMap:true
-                }}
+                    {
+                        loader:'css-loader',
+                        options:{
+                        sourceMap:true
+                    }
+                    },
+                    {
+                        loader:'sass-loader',
+                        options:{
+                        sourceMap:true
+                        }
+                    }
                 ]
             })
-        }
-    ]
+        }]
     },
 
     plugins: [
