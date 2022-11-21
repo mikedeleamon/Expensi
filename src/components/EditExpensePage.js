@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from 'react-redux'
-import { editExpense,removeExpense } from "../Actions/expenses";
+import { editExpense,removeExpense } from "../actions/expenses";
 import ExpenseForm from "./ExpenseForm";
 
 export class EditExpensePage extends React.Component{

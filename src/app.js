@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Provider}  from 'react-redux'
 import AppRouter from './routers/AppRouter'
 import configureStore from './store/configureStore'
-import { addExpense} from './Actions/expenses'
+import { addExpense} from './actions/expenses'
 import { setFilterText, sortByAmount, sortByDate } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
 //normalize.css is a css reset(this is cross browser friendly)

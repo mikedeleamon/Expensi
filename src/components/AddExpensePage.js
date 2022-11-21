@@ -2,7 +2,7 @@ import React from "react";
 import expenses from "../selectors/expenses";
 import {connect} from 'react-redux'
 import ExpenseForm from "./ExpenseForm";
-import { addExpense } from "../Actions/expenses";
+import { addExpense } from "../actions/expenses";
 
 export class AddExpensePage extends React.Component{
     addExpense=(expense)=>{
