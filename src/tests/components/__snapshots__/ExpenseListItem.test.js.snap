@@ -13,9 +13,9 @@ exports[`should render single item 1`] = `
     </Link>
   </div>
   <h3>
-    83300
+    $833.00
      - created at: 
-    -345600000
+    December 27th, 1969
      
   </h3>
 </div>
