@@ -14,7 +14,7 @@ const CSSExtract = new ExtractTextPlugin('styles.css')
     entry: './src/app.js',
     output: {
         //output path must be explicitly declared. use __dirname to access dir location
-        path:path.join(__dirname,'public'),
+        path:path.join(__dirname,'public','dist'),
         filename:'bundle.js'
     },
     // loader
@@ -63,7 +63,8 @@ const CSSExtract = new ExtractTextPlugin('styles.css')
     devServer:{
         contentBase: [path.join(__dirname,'public')],
         //this tells app that this app is using client side routing when the value is true
-        historyApiFallback:true
+        historyApiFallback:true,
+        publicPath:'/dist/'
     }}
 }
 
