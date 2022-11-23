@@ -2,6 +2,7 @@
 
 exports[`should render empty dashboard page 1`] = `
 <div>
+  <Connect(ExpsenseSummary) />
   <Connect(ExpenseListFilters) />
   <Connect(ExpenseList) />
 </div>
