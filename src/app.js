@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import {Provider}  from 'react-redux'
 import AppRouter from './routers/AppRouter'
 import configureStore from './store/configureStore'
-import { addExpense} from './actions/expenses'
+import { startSetExpenses} from './actions/expenses'
 import { setFilterText, sortByAmount, sortByDate } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
 //normalize.css is a css reset(this is cross browser friendly)
@@ -28,8 +28,12 @@ const jsx = (
     </Provider>
 )
 
+ ReactDOM.render(<p>Loading...</p>,appRoot)
+ store.dispatch(startSetExpenses()).then(()=>{
+     ReactDOM.render(jsx,appRoot)
+ })
 
-ReactDOM.render(jsx,appRoot)
+ //ReactDOM.render(jsx,appRoot)
 
 
  
