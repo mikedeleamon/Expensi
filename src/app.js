@@ -12,6 +12,10 @@ import "./styles/styles.scss"
 import 'react-dates/lib/css/_datepicker.css'
 
 
+//database
+import './firebase/firebase'
+
+
 
 
 //this element ID is an empty div in the index.html
