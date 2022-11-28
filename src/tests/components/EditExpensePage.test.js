@@ -15,7 +15,7 @@ beforeEach(()=>{
     wrapper = shallow(
     <EditExpensePage 
         editExpense = {editExpenseSpy} 
-        removeExpense={removeExpenseSpy} 
+        startRemoveExpense={removeExpenseSpy} 
         history={history}
         expense = {expense}
 
@@ -34,7 +34,7 @@ test('should generate edit page properly with data',()=>{
     expect(wrapper).toMatchSnapshot()
 })
 
- test('should generate remove expense from expenses data',()=>{
+ test('should generate startRemoveExpense from expenses data',()=>{
     wrapper.find('button').simulate('click')
     expect(history.push).toHaveBeenLastCalledWith('/')
     expect(removeExpenseSpy).toHaveBeenLastCalledWith({id:expense.id})

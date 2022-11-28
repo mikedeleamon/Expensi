@@ -56,7 +56,7 @@ exports[`should generate edit page properly with data 1`] = `
 </div>
 `;
 
-exports[`should generate remove expense from expenses data 1`] = `
+exports[`should generate startRemoveExpense from expenses data 1`] = `
 <div>
    
   <h1>
