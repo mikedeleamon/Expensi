@@ -1,11 +1,11 @@
 import React from "react";
 import {connect} from 'react-redux'
-import { editExpense,startRemoveExpense } from "../actions/expenses";
+import { startEditExpense,startRemoveExpense } from "../actions/expenses";
 import ExpenseForm from "./ExpenseForm";
 
 export class EditExpensePage extends React.Component{
     editExpense =(expense) => {
-                this.props.editExpense(this.props.expense.id,expense)
+                this.props.startEditExpense(this.props.expense.id,expense)
                 this.props.history.push('/')
             }
     
@@ -31,7 +31,7 @@ export class EditExpensePage extends React.Component{
 const matchDispacthToProps = (dispatch)=> {
     return{
         // allows you to remove the dispatch commanad by mapping it to props
-        editExpense: (id, expense)=> dispatch(editExpense(id,expense)),
+        editExpense: (id, expense)=> dispatch(startEditExpense(id,expense)),
         startRemoveExpense: (id) => dispatch(startRemoveExpense(id))
 
     }
