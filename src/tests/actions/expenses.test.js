@@ -145,7 +145,7 @@ test('should update expenses from firebase',(done)=>{
         })
         return database.ref(`expenses/${id}`).once('value')
         }).then((snapshot)=>{
-            console.log(snapshot.val())
+    
             expect(snapshot.val().description).toBe(updates.description)
             done()
         })

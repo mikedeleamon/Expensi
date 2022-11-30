@@ -3,6 +3,8 @@ import * as firebase from "firebase";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -14,10 +16,12 @@ const firebaseConfig = {
   appId: process.env.FIREBASE_APP_ID
 };
 
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
 //const app = initializeApp(firebaseConfig);
 
 const database = firebase.database()
 
-export {firebase, database as default}
+export {firebase, googleAuthProvider, database as default}

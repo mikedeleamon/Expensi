@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider}  from 'react-redux'
-import AppRouter from './routers/AppRouter'
+import AppRouter,{history} from './routers/AppRouter'
 import configureStore from './store/configureStore'
 import { startSetExpenses} from './actions/expenses'
-import { setFilterText, sortByAmount, sortByDate } from './actions/filters'
+import { login, logout } from './actions/auth'
 import getVisibleExpenses from './selectors/expenses'
 //normalize.css is a css reset(this is cross browser friendly)
 import '../node_modules/normalize.css/normalize.css'
@@ -13,7 +13,8 @@ import 'react-dates/lib/css/_datepicker.css'
 
 
 //database
-import './firebase/firebase'
+import {firebase} from './firebase/firebase'
+//import { render } from 'node-sass'
 
 
 
@@ -27,12 +28,36 @@ const jsx = (
         <AppRouter/>
     </Provider>
 )
+let hasRendered = false
+
+const renderApp = () => {
+    if(!hasRendered){
+        ReactDOM.render(jsx,appRoot)
+        hasRendered = true
+    }
+}
 
  ReactDOM.render(<p>Loading...</p>,appRoot)
- store.dispatch(startSetExpenses()).then(()=>{
-     ReactDOM.render(jsx,appRoot)
- })
 
+
+ firebase.auth().onAuthStateChanged((user)=>{
+    if(user){ 
+        store.dispatch(login(user.uid))
+        store.dispatch(startSetExpenses()).then(()=>{
+        renderApp()
+//checks if authenticated user is at the login screen
+        if(history.location.pathname === '/'){
+            history.push('/dashboard')
+        }
+    })
+       
+    }
+    else{
+        store.dispatch(logout())
+        renderApp()
+        history.push('/')
+    }
+ })
  //ReactDOM.render(jsx,appRoot)
 
 
