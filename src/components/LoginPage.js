@@ -6,8 +6,8 @@ export const LoginPage = ({startLogin}) => (
     <div><button onClick={startLogin}>Log In</button></div>
 )
 
-const mapDispatchToprops = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => ({
     startLogin: ()=>{dispatch(startLogin())}
 })
 
-export default connect(undefined,mapDispatchToprops)(LoginPage)
+export default connect(undefined,mapDispatchToProps)(LoginPage)
