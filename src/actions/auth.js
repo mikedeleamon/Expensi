@@ -13,12 +13,12 @@ export const startLogout = () =>{
     }
 }
 
-export const login = (uid) =>{
+export const login = (uid) =>({
     type:'LOGIN',
     uid
-}
+})
 
-export const logout = () =>{
+export const logout = () =>({
     type:'LOGOUT'
     
-}
+})
